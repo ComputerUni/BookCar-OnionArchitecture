@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.CQRS.Handlers.AboutHandlers
+namespace CarBook.Application.Features.CQRS.Handlers.AboutHandlers.Read
 {
     public class GetAboutByIdQueryHandler(IRepository<About> _repository) 
     {
