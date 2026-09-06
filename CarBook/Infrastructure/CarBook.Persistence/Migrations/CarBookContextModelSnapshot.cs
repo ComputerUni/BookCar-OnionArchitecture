@@ -108,9 +108,6 @@ namespace CarBook.Persistence.Migrations
                     b.Property<int>("BrandId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CarDescriptionId")
-                        .HasColumnType("int");
-
                     b.Property<string>("CoverImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

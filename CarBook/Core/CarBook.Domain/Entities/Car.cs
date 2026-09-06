@@ -16,7 +16,6 @@ namespace CarBook.Domain.Entities
         public FuelType Fuel { get; set; }
         public string BigImageUrl { get; set; }
         public List<CarFeature> CarFeatures { get; set; }
-        public int CarDescriptionId { get; set; }
         public List<CarDescription> CarDescriptions { get; set; }
         public List<CarPricing> CarPricings { get; set; }
     }
