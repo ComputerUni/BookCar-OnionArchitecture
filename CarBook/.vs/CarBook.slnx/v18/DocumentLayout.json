@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\BURHAN\\Desktop\\CarBook\\CarBook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F36B0F9A-9ED3-4E59-BB10-59B9D88A7867}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|c:\\users\\burhan\\desktop\\carbook\\carbook\\presentation\\carbook.webapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F36B0F9A-9ED3-4E59-BB10-59B9D88A7867}|Presentation\\CarBook.WebApi\\CarBook.WebApi.csproj|solutionrelative:presentation\\carbook.webapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{989A97C2-D408-4881-8BCC-316A337D2899}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\burhan\\desktop\\carbook\\carbook\\core\\carbook.application\\features\\cqrs\\results\\contactresults\\getcontactqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{989A97C2-D408-4881-8BCC-316A337D2899}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\results\\contactresults\\getcontactqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{989A97C2-D408-4881-8BCC-316A337D2899}|Core\\CarBook.Application\\CarBook.Application.csproj|c:\\users\\burhan\\desktop\\carbook\\carbook\\core\\carbook.application\\features\\cqrs\\results\\contactresults\\getcontactbyidqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{989A97C2-D408-4881-8BCC-316A337D2899}|Core\\CarBook.Application\\CarBook.Application.csproj|solutionrelative:core\\carbook.application\\features\\cqrs\\results\\contactresults\\getcontactbyidqueryresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 948,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +38,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CarsController.cs",
-              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\CarBook\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\CarBook\\CarBook\\Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "RelativeToolTip": "Presentation\\CarBook.WebApi\\Controllers\\CarsController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAwwCkAAAARAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GetContactByIdQueryResult.cs",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\CarBook\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactByIdQueryResult.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactByIdQueryResult.cs",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\CarBook\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactByIdQueryResult.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactByIdQueryResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-06T14:39:22.24Z",
+              "WhenOpened": "2026-09-06T17:13:15.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetContactQueryResult.cs",
+              "DocumentMoniker": "C:\\Users\\BURHAN\\Desktop\\CarBook\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactQueryResult.cs",
+              "RelativeDocumentMoniker": "Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactQueryResult.cs",
+              "ToolTip": "C:\\Users\\BURHAN\\Desktop\\CarBook\\CarBook\\Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactQueryResult.cs",
+              "RelativeToolTip": "Core\\CarBook.Application\\Features\\CQRS\\Results\\ContactResults\\GetContactQueryResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-06T17:12:46.439Z",
               "EditorCaption": ""
             }
           ]

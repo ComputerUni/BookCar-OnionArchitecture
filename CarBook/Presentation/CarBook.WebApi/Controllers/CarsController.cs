@@ -9,7 +9,7 @@ namespace CarBook.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarsController(CreateCarCommandHandler _createCarCommandHandler, UpdateCarCommandHandler _updateCarCommandHandler, RemoveCarCommandHandler _removeCarCommandHandler, GetCarByIdQueryHandler _getCarByIdQueryHandler, GetCarQueryHandler _getCarQueryHandler) : ControllerBase
+    public class CarsController(CreateCarCommandHandler _createCarCommandHandler, UpdateCarCommandHandler _updateCarCommandHandler, RemoveCarCommandHandler _removeCarCommandHandler, GetCarByIdQueryHandler _getCarByIdQueryHandler, GetCarQueryHandler _getCarQueryHandler, GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> CarList()
@@ -44,6 +44,13 @@ namespace CarBook.WebApi.Controllers
         {
             await _updateCarCommandHandler.Handle(updateCarCommand);
             return Ok("Araba Bilgisi Başarıyla Güncellendi.");
+        }
+
+        [HttpGet("GetCarWithBrand")]
+        public async Task<IActionResult> GetCarWithBrand()
+        {
+            var values = await _getCarWithBrandQueryHandler.Handle();
+            return Ok(values);
         }
     }
 }
