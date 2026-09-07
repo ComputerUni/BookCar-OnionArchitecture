@@ -152,3 +152,7 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\ne
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\net8.0\ref\CarBook.WebApi.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Application.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Application.pdb
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
