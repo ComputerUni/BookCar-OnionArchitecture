@@ -9,6 +9,9 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\ne
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\Humanizer.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -50,6 +53,7 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\ne
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Memory.Data.dll
@@ -121,9 +125,11 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\ne
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Application.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Domain.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Persistence.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Persistence.pdb
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Application.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Domain.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\net8.0\CarBook.WebApi.csproj.AssemblyReference.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\net8.0\rpswa.dswa.cache.json
@@ -150,9 +156,3 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\ne
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\net8.0\CarBook.WebApi.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\net8.0\CarBook.WebApi.genruntimeconfig.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\net8.0\ref\CarBook.WebApi.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Application.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\CarBook.Application.pdb
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.Contracts.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll

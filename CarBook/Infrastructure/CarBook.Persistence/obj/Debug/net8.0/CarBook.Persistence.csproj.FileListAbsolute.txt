@@ -2,7 +2,9 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\D
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Persistence.runtimeconfig.json
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Persistence.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Persistence.pdb
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Application.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Domain.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Application.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Domain.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\obj\Debug\net8.0\CarBook.Persistence.csproj.AssemblyReference.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\obj\Debug\net8.0\CarBook.Persistence.GeneratedMSBuildEditorConfig.editorconfig
@@ -16,5 +18,3 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\obj\D
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\obj\Debug\net8.0\CarBook.Persistence.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\obj\Debug\net8.0\CarBook.Persistence.genruntimeconfig.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\obj\Debug\net8.0\ref\CarBook.Persistence.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Application.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Infrastructure\CarBook.Persistence\bin\Debug\net8.0\CarBook.Application.pdb
