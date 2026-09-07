@@ -7,6 +7,10 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.WebUI.runtimeconfig.json
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.WebUI.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.WebUI.pdb
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Dto.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Dto.pdb
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.csproj.AssemblyReference.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.AssemblyInfoInputs.cache
@@ -28,6 +32,7 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\swae.build.ex.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook..7B7C417C.Up2Date
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\refint\CarBook.WebUI.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.pdb
