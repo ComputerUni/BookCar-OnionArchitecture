@@ -10,3 +10,7 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\obj\Debug\net8.0\C
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\obj\Debug\net8.0\refint\CarBook.Dto.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\obj\Debug\net8.0\CarBook.Dto.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\obj\Debug\net8.0\ref\CarBook.Dto.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\bin\Debug\net8.0\CarBook.Domain.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\bin\Debug\net8.0\CarBook.Domain.pdb
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\obj\Debug\net8.0\CarBook.Dto.csproj.AssemblyReference.cache
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.Dto\obj\Debug\net8.0\CarBook..2BB8CCD7.Up2Date
