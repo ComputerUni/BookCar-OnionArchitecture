@@ -8,6 +8,8 @@ namespace CarBook.WebUI.Controllers
     {
         public async Task<IActionResult> Index()
         {
+            ViewBag.v1 = "Hizmetler";
+            ViewBag.v2 = "Şirketimizin Hizmetleri";
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync("https://localhost:7200/api/Services");
             if(response.IsSuccessStatusCode)
