@@ -8,8 +8,10 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.WebUI.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.WebUI.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Domain.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Dto.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Dto.pdb
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Domain.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.csproj.AssemblyReference.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.GeneratedMSBuildEditorConfig.editorconfig
@@ -38,5 +40,3 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.pdb
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\CarBook.WebUI.genruntimeconfig.cache
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\obj\Debug\net8.0\ref\CarBook.WebUI.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Domain.dll
-C:\Users\BURHAN\Desktop\CarBook\CarBook\Frontends\CarBook.WebUI\bin\Debug\net8.0\CarBook.Domain.pdb

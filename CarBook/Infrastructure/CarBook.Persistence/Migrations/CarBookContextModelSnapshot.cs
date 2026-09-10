@@ -109,11 +109,7 @@ namespace CarBook.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BlogId"));
 
-                    b.Property<string>("AuthorId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("AuthorId1")
+                    b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
@@ -132,7 +128,7 @@ namespace CarBook.Persistence.Migrations
 
                     b.HasKey("BlogId");
 
-                    b.HasIndex("AuthorId1");
+                    b.HasIndex("AuthorId");
 
                     b.HasIndex("CategoryId");
 
@@ -487,7 +483,7 @@ namespace CarBook.Persistence.Migrations
                 {
                     b.HasOne("CarBook.Domain.Entities.Author", "Author")
                         .WithMany("Blogs")
-                        .HasForeignKey("AuthorId1")
+                        .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
