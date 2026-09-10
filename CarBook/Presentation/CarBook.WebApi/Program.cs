@@ -11,6 +11,8 @@ using CarBook.Application.Features.CQRS.Handlers.CategoryHandlers.Write;
 using CarBook.Application.Features.CQRS.Handlers.ContactHandlers.Read;
 using CarBook.Application.Features.CQRS.Handlers.ContactHandlers.Write;
 using CarBook.Application.Features.Mediator.Handlers.CarPricingHandlers.Read;
+using CarBook.Application.Features.Mediator.Handlers.TagCloudHandlers.Read;
+using CarBook.Application.Features.Mediator.Handlers.TagCloudHandlers.Write;
 using CarBook.Application.Interfaces;
 using CarBook.Application.Interfaces.BlogInterfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
@@ -71,6 +73,12 @@ builder.Services.AddScoped<GetContactByIdQueryHandler>();
 builder.Services.AddScoped<CreateContactCommandHandler>();
 builder.Services.AddScoped<UpdateContactCommandHandler>();
 builder.Services.AddScoped<RemoveContactCommandHandler>();
+
+builder.Services.AddScoped<GetTagCloudQueryHandler>();
+builder.Services.AddScoped<GetTagCloudByIdQueryHandler>();
+builder.Services.AddScoped<CreateTagCloudCommandHandler>();
+builder.Services.AddScoped<UpdateTagCloudCommandHandler>();
+builder.Services.AddScoped<RemoveTagCloudCommandHandler>();
 
 builder.Services.AddApplicationService(builder.Configuration);
 
