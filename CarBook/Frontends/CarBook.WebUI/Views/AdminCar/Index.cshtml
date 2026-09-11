@@ -1,0 +1,65 @@
+﻿@model List<ResultCarDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mt-3">
+                                <h4 class="card-title">Araba Listesi</h4>
+                                <p class="card-subtitle mb-4"><code class="text-info font-weight-bold">Arabalarla ilgili ekleme, silme, arama ve listeleme gibi işlemleri bu sayfadan yapabilirsiniz.</code></p>
+                            </div>
+
+                            <div class="mt-3">
+                                <a href="/AdminCar/CreateCar" class="btn btn-outline-info"><i class="fa fa-plus"></i> Yeni Araba</a>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+
+                            <table class="table table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Marka</th>
+                                        <th>Model</th>
+                                        <th>Vites Türü</th>
+                                        <th>Km</th>
+                                        <th>İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>@item.brandName</td>
+                                            <td>@item.model</td>
+                                            <td>@item.transmission</td>
+                                            <td>@item.km</td>
+                                            <td d-flex mr-3>
+                                                <a href="/AdminCar/RemoveCar/@item.carId" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                                                <a href="/AdminCar/UpdateCar/@item.carId" class="btn btn-outline-secondary"><i class="fa fa-pencil-alt"></i></a>
+                                                <a href="/CarList/CarDetail/@item.carId" class="btn btn-outline-dark"><i class="fa fa-car"></i></a>
+                                                <a href="/CarList/CarDetail/@item.carId" class="btn btn-outline-info"><i class="fa fa-eye-slash"></i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

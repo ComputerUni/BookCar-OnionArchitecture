@@ -1,0 +1,80 @@
+﻿@model CreateCarDto
+
+@{
+    ViewData["Title"] = "CreateCar";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araç Ekleme Formu</h4>
+                        <p class="card-subtitle mb-4">Bu formu kullanarak sisteminize yeni araçlar ekleyebilirsiniz.</p>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputBrand">Marka</label>
+                                @*@Html.DropDownListFor(x => x.BrandId, (List<SelectListItem>)ViewBag.BrandValues, new { @class = "form-control" })*@
+                                <select asp-for="BrandId" asp-items="@ViewBag.BrandValues" class="form-control">
+                                    <option value="" disabled>Lütfen Marka Seçiniz</option>
+                                </select>
+                                <small id="emailHelp" class="form-text text-muted">Sistemimizdeki mevcut markalara göre seçim yapabilirsiniz.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputModel">Model</label>
+                                <input type="text" class="form-control" id="exampleInputModel" asp-for="Model" placeholder="Aracın modelini giriniz (Örn: Hatchback, Elektrikli, SUV)">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCoverImage">Kapak Fotoğrafı</label>
+                                <input type="text" class="form-control" id="exampleInputCoverImage" asp-for="CoverImageUrl" placeholder="Kapak fotoğrafı linkini giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputBigImage">Büyük Kapak Fotoğrafı</label>
+                                <input type="text" class="form-control" id="exampleInputBigImage" asp-for="BigImageUrl" placeholder="Araç detayında gözükecek kapak fotoğraf linkini giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputKm">Km</label>
+                                <input type="text" class="form-control" id="exampleInputKm" asp-for="Km" placeholder="Km bilgisini giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputSeat">Koltuk Sayısı</label>
+                                <input type="number" class="form-control" id="exampleInputSeat" asp-for="Seat" placeholder="Koltuk sayısı bilgisini giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLuggage">Bagaj Sayısı</label>
+                                <input type="number" class="form-control" id="exampleInputLuggage" asp-for="Luggage" placeholder="Bagaj sayısı bilgisini giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFuel">Yakıt Türü</label>
+                                <select asp-for="Fuel" asp-items="@ViewBag.FuelValues" class="form-control">
+                                    <option value="">Yakıt Türü Seçiniz</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputTransmission">Vites Türü</label>
+                                <select asp-for="Transmission" asp-items="@ViewBag.TransmissionValues" class="form-control">
+                                    <option value="">Vites Türü Seçiniz</option>
+                                </select>
+                            </div>
+@*                             <div class="form-group mb-3">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkmeout0">
+                                    <label class="custom-control-label" for="checkmeout0">Check me out !</label>
+                                </div>
+                            </div> *@
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

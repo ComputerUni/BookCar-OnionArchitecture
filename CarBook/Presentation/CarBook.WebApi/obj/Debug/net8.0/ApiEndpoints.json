@@ -443,22 +443,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.CarsController",
-    "Method": "DeleteAsync",
-    "RelativePath": "api/Cars",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.CarsController",
     "Method": "UpdateAsync",
     "RelativePath": "api/Cars",
     "HttpMethod": "PUT",
@@ -478,6 +462,22 @@
     "Method": "GetCar",
     "RelativePath": "api/Cars/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.CarsController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Cars/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
