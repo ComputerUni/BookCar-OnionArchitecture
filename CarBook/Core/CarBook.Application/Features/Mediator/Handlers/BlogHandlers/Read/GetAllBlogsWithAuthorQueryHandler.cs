@@ -22,6 +22,8 @@ namespace CarBook.Application.Features.Mediator.Handlers.BlogHandlers.Read
                 BlogId = x.BlogId,
                 Title = x.Title,
                 AuthorName = x.Author.Name,
+                AuthorImageUrl = x.Author.ImageUrl,
+                AuthorDescription = x.Author.Description,
                 CategoryName = x.Category.Name,
                 AuthorId = x.AuthorId,
                 CoverImageUrl = x.CoverImageUrl,

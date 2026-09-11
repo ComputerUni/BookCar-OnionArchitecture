@@ -8,8 +8,10 @@ namespace CarBook.WebUI.ViewComponents.BlogViewComponents
     {
         public async Task<IViewComponentResult> InvokeAsync(int id)
         {
+            ViewBag.blogid = id;
+
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync($"https://localhost:7200/api/TagClouds/" + id);
+            var response = await client.GetAsync($"https://localhost:7200/api/TagClouds/GetTagCloudByBlogId?id=" + id);
             if(response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
