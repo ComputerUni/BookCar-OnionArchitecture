@@ -4,14 +4,14 @@ using CarBook.Dto.CarDtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.Text;
+using X.PagedList.Extensions;
 
 namespace CarBook.WebUI.Controllers
 {
     public class AdminCarController(IHttpClientFactory _httpClientFactory) : Controller
     {
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync("https://localhost:7200/api/Cars/GetCarWithBrand");
@@ -19,13 +19,13 @@ namespace CarBook.WebUI.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var value = JsonConvert.DeserializeObject<List<ResultCarDto>>(jsonData);
-                return View(value);
+                return View(value.ToPagedList(page, 13));
             }
             return View();
         }
 
         [HttpGet]
-        public async Task<IActionResult> CreateCar()
+        public async Task<IActionResult> CreateCar() 
         {
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync("https://localhost:7200/api/Brands");

@@ -543,26 +543,6 @@
           }
         }
       },
-      "delete": {
-        "tags": [
-          "Brands"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "put": {
         "tags": [
           "Brands"
@@ -595,6 +575,27 @@
     },
     "/api/Brands/{id}": {
       "get": {
+        "tags": [
+          "Brands"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
         "tags": [
           "Brands"
         ],
@@ -1116,26 +1117,6 @@
           }
         }
       },
-      "delete": {
-        "tags": [
-          "Features"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
       "put": {
         "tags": [
           "Features"
@@ -1168,6 +1149,27 @@
     },
     "/api/Features/{id}": {
       "get": {
+        "tags": [
+          "Features"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
         "tags": [
           "Features"
         ],

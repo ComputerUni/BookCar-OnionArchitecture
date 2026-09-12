@@ -9,7 +9,8 @@
       "CarBook.WebUI/1.0.0": {
         "dependencies": {
           "CarBook.Dto": "1.0.0",
-          "Newtonsoft.Json": "13.0.4"
+          "Newtonsoft.Json": "13.0.4",
+          "X.PagedList.Mvc.Core": "10.6.0"
         },
         "runtime": {
           "CarBook.WebUI.dll": {}
@@ -20,6 +21,25 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
             "fileVersion": "13.0.4.30916"
+          }
+        }
+      },
+      "X.PagedList/10.6.0": {
+        "runtime": {
+          "lib/net8.0/X.PagedList.dll": {
+            "assemblyVersion": "10.6.0.0",
+            "fileVersion": "10.6.0.0"
+          }
+        }
+      },
+      "X.PagedList.Mvc.Core/10.6.0": {
+        "dependencies": {
+          "X.PagedList": "10.6.0"
+        },
+        "runtime": {
+          "lib/net8.0/X.PagedList.Mvc.Core.dll": {
+            "assemblyVersion": "10.6.0.0",
+            "fileVersion": "10.6.0.0"
           }
         }
       },
@@ -56,6 +76,20 @@
       "sha512": "sha512-pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A==",
       "path": "newtonsoft.json/13.0.4",
       "hashPath": "newtonsoft.json.13.0.4.nupkg.sha512"
+    },
+    "X.PagedList/10.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qmz+RBQA3swsFZbEfO9XJi7bsInH9vu2S5/o/68BzkoxqiusqDfJY0Y0s2SCVfeK+EQW3RaPFenfKvEaQQa62Q==",
+      "path": "x.pagedlist/10.6.0",
+      "hashPath": "x.pagedlist.10.6.0.nupkg.sha512"
+    },
+    "X.PagedList.Mvc.Core/10.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JMXpLkP1UpKdgFowc7s0o0cBTh0R7bS9gJMWWsnqqz5qXQCBEa8J9+D6b+XWnHq9u8hhxVtQuI20EGwMtypUmw==",
+      "path": "x.pagedlist.mvc.core/10.6.0",
+      "hashPath": "x.pagedlist.mvc.core.10.6.0.nupkg.sha512"
     },
     "CarBook.Domain/1.0.0": {
       "type": "project",

@@ -359,22 +359,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.BrandsController",
-    "Method": "DeleteAsync",
-    "RelativePath": "api/Brands",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.BrandsController",
     "Method": "UpdateAsync",
     "RelativePath": "api/Brands",
     "HttpMethod": "PUT",
@@ -394,6 +378,22 @@
     "Method": "GetBrand",
     "RelativePath": "api/Brands/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.BrandsController",
+    "Method": "DeleteAsync",
+    "RelativePath": "api/Brands/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -743,22 +743,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.FeaturesController",
-    "Method": "RemoveFeature",
-    "RelativePath": "api/Features",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.FeaturesController",
     "Method": "UpdateFeature",
     "RelativePath": "api/Features",
     "HttpMethod": "PUT",
@@ -778,6 +762,22 @@
     "Method": "GetFeature",
     "RelativePath": "api/Features/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.FeaturesController",
+    "Method": "RemoveFeature",
+    "RelativePath": "api/Features/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
