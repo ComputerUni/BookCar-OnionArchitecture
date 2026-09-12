@@ -1,0 +1,38 @@
+﻿@model CreateAuthorDto
+
+@{
+    ViewData["Title"] = "CreateAuthor";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yazar Oluşturma Formu</h4>
+                        <p class="card-subtitle mb-4">Bu formu kullanarak sisteme yazar ekleyebilirsiniz.</p>
+                        <form method="post" asp-area="Admin" asp-controller="AdminAuthor" asp-action="CreateAuthor">
+                            <div class="form-group">
+                                <label for="exampleInputTitle">Yazar Adı</label>
+                                <input type="text" class="form-control" id="exampleInputTitle" asp-for="Name" placeholder="Yazar adını giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDesc">Açıklama</label>
+                                <textarea rows="4" class="form-control" id="exampleInputDesc" asp-for="Description" placeholder="Yazar içeriğini giriniz..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputImageUrl">Resim Dosya Yolu</label>
+                                <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Resim dosya yolunu giriniz...">
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

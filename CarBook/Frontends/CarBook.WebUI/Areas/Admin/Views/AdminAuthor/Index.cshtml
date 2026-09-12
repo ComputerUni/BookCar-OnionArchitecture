@@ -1,0 +1,86 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<ResultAuthorDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = (Model.PageNumber - 1) * Model.PageSize;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mt-3">
+                                <h4 class="card-title">Yazarlar Listesi</h4>
+                                <p class="card-subtitle mb-4"><code class="text-info font-weight-bold">Yazarlar ile ilgili işlemlerinizi buradan gerçekleştirebilirsiniz.</code></p>
+                            </div>
+                            <div class="mt-3">
+                                <a href="/Admin/AdminAuthor/CreateAuthor" class="btn btn-outline-info"><i class="fa fa-plus"></i> Yeni Yazar</a>
+                            </div>
+                        </div>
+                        @if (Model.Any() && Model != null)
+                        {
+                            <div class="table-responsive">
+
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Görsel</th>
+                                            <th>Yazar Adı</th>
+                                            <th>Açıklama</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            count++;
+                                            <tr>
+                                                <th scope="row">@count</th>
+                                                <td>
+                                                    <img src="@item.ImageUrl"
+                                                         alt="@item.Name"
+                                                         class="rounded"
+                                                         style="width: 48px; height: 48px; object-fit: cover; border: 1px solid #dee2e6;" />
+                                                </td>
+                                                <td>@item.Name</td>
+                                                <td>@(item.Description.Length > 100 ? item.Description.Substring(0, 100) + "" + "..." : item.Description)</td>
+                                                <td>
+                                                    <a href="/Admin/AdminAuthor/RemoveAuthor/@item.AuthorId" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId" class="btn btn-outline-warning"><i class="fa fa-pencil-alt"></i></a>
+                                                    <a href="/Admin/AdminAuthor/UpdateAuthor/@item.AuthorId" class="btn btn-outline-secondary"><i class="fas fa-tv"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="d-flex justify-content-left mt-4">
+                                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions
+                                {
+                                    LiElementClasses = new string[] { "page-item" },
+                                    PageClasses = new string[] { "page-link" },
+                                    DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+                                    DisplayLinkToLastPage = PagedListDisplayMode.Always,
+                                    DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                                    DisplayLinkToNextPage = PagedListDisplayMode.Always
+                                })
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-info" role="alert">
+                                Herhangi bir hakkımda bilgisi bulunamadı.
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

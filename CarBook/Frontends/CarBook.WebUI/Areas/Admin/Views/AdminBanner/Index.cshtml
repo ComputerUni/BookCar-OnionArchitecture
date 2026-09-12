@@ -1,0 +1,84 @@
+﻿@using CarBook.Dto.BannerDtos
+@model List<ResultBannerDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mt-3">
+                                <h4 class="card-title">Banner Listesi</h4>
+                                <p class="card-subtitle mb-4"><code class="text-info font-weight-bold">Banner ile ilgili işlemlerinizi buradan gerçekleştirebilirsiniz.</code></p>
+                            </div>
+
+                            @if (!Model.Any() || Model == null)
+                            {
+                                <div class="mt-3">
+                                    <a href="/Admin/AdminBanner/CreateBanner" class="btn btn-outline-info"><i class="fa fa-plus"></i> Yeni Banner</a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    Yeni Banner Eklemek İçin Mevcut Banner Özelliğini Siliniz
+                                </div>
+                            }
+
+                        </div>
+                        @if (Model.Any() && Model != null)
+                        {
+                            <div class="table-responsive">
+
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Başlık</th>
+                                            <th>Açıklama</th>
+                                            <th>Video Açıklaması</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            count++;
+                                            <tr>
+                                                <th scope="row">@count</th>
+                                                <td>@item.Title</td>
+                                                <td>@(item.Description.Length > 100 ? item.Description.Substring(0, 100) + "" + "..." : item.Description)</td>
+                                                <td>@(item.VideoDescription.Length > 100 ? item.VideoDescription.Substring(0, 100) + "" + "..." : item.VideoDescription)</td>
+
+                                                <td d-flex mr-3>
+                                                    <a href="/Admin/AdminBanner/RemoveBanner/@item.BannerId" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="/Admin/AdminBanner/UpdateBanner/@item.BannerId" class="btn btn-outline-warning"><i class="fa fa-pencil-alt"></i></a>
+                                                    <a href="/Admin/AdminBanner/UpdateBanner/@item.BannerId" class="btn btn-outline-secondary"><i class="fas fa-tv"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                Herhangi bir banner özelliği bulunamadı.
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

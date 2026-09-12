@@ -32,7 +32,7 @@ namespace CarBook.WebApi.Controllers
             return Ok("Kategori Bilgisi Başarıyla Eklendi");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             await _removeCategoryCommandHandler.Handle(new RemoveCategoryCommand(id));
