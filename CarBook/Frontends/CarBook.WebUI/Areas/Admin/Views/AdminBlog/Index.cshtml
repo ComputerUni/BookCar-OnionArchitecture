@@ -1,0 +1,83 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<ResultAllBlogsWithAuthors>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = (Model.PageNumber - 1) * Model.PageSize;
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mt-3">
+                                <h4 class="card-title">Blog Listesi ve İşlemleri</h4>
+                                <p class="card-subtitle mb-4"><code class="text-info font-weight-bold">Bloglarla ilgili silme, güncelleme ve blog listesi erişimini görebilirsiniz. Yeni blog ekleme işlemi admin tarafından yapılmamaktadır. Eğer blog ekleme işlemi yapmak isterseniz sisteme yazar olarak giriş yapmanız gerekmektedir.</code></p>
+                            </div>
+                        </div>
+                        @if (Model.Any() && Model != null)
+                        {
+                            <div class="table-responsive">
+
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Başlık</th>
+                                            <th>Yazar</th>
+                                            <th>Kategori</th>
+                                            <th>Tarih</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            count++;
+                                            <tr>
+                                                <th scope="row">@count</th>
+                                                <td>@item.Title</td>
+                                                <td>@item.AuthorName</td>
+                                                <td>@item.CategoryName</td>
+                                                <td>@item.CreatedDate.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("tr-TR"))</td>
+
+                                                <td d-flex mr-3>
+                                                    <a href="/Admin/AdminBlog/RemoveBlog/@item.BlogId" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                                                    <a href="/Blog/BlogDetail/@item.BlogId" class="btn btn-outline-secondary"><i class="fas fa-eye"></i></a>
+                                                    <a href="/Admin/AdminComment/Index/@item.BlogId" class="btn btn-outline-secondary"><i class="fas fa-comment"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex justify-content-left mt-4">
+                                @Html.PagedListPager(Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions
+                                {
+                                    LiElementClasses = new string[] { "page-item" },
+                                    PageClasses = new string[] { "page-link" },
+                                    DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+                                    DisplayLinkToLastPage = PagedListDisplayMode.Always,
+                                    DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                                    DisplayLinkToNextPage = PagedListDisplayMode.Always
+                                })
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                Herhangi bir banner özelliği bulunamadı.
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -31,7 +31,7 @@ namespace CarBook.WebApi.Controllers
             return Ok("Fiyat Bilgisi Başarıyla Eklendi");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> RemovePricing(int id)
         {
             await _mediator.Send(new RemovePricingCommand(id));
