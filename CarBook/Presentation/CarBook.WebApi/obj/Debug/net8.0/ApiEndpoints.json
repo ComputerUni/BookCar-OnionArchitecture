@@ -1176,6 +1176,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CarBook.WebApi.Controllers.StatisticsController",
+    "Method": "GetCarCount",
+    "RelativePath": "api/Statistics/GetCarCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CarBook.WebApi.Controllers.TagCloudsController",
     "Method": "TagCloudList",
     "RelativePath": "api/TagClouds",

@@ -2,6 +2,8 @@
 using CarBook.Application.Features.CQRS.Handlers.CarHandlers.Read;
 using CarBook.Application.Features.CQRS.Handlers.CarHandlers.Write;
 using CarBook.Application.Features.CQRS.Queries.CarQueries;
+using CarBook.Application.Features.Mediator.Queries.StatisticsQueries;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +11,7 @@ namespace CarBook.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarsController(CreateCarCommandHandler _createCarCommandHandler, UpdateCarCommandHandler _updateCarCommandHandler, RemoveCarCommandHandler _removeCarCommandHandler, GetCarByIdQueryHandler _getCarByIdQueryHandler, GetCarQueryHandler _getCarQueryHandler, GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler _getLast5CarsWithBrandQueryHandler) : ControllerBase
+    public class CarsController(IMediator _mediator, CreateCarCommandHandler _createCarCommandHandler, UpdateCarCommandHandler _updateCarCommandHandler, RemoveCarCommandHandler _removeCarCommandHandler, GetCarByIdQueryHandler _getCarByIdQueryHandler, GetCarQueryHandler _getCarQueryHandler, GetCarWithBrandQueryHandler _getCarWithBrandQueryHandler, GetLast5CarsWithBrandQueryHandler _getLast5CarsWithBrandQueryHandler) : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> CarList()
@@ -59,5 +61,7 @@ namespace CarBook.WebApi.Controllers
             var values = await _getLast5CarsWithBrandQueryHandler.Handle();
             return Ok(values);
         }
+
+      
     }
 }
