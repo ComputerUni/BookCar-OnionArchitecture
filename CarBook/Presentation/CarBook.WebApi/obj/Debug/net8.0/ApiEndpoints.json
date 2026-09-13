@@ -833,22 +833,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.FooterAddressesController",
-    "Method": "RemoveFooterAddress",
-    "RelativePath": "api/FooterAddresses",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.FooterAddressesController",
     "Method": "UpdateFooterAddress",
     "RelativePath": "api/FooterAddresses",
     "HttpMethod": "PUT",
@@ -868,6 +852,22 @@
     "Method": "GetFooterAddress",
     "RelativePath": "api/FooterAddresses/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.FooterAddressesController",
+    "Method": "RemoveFooterAddress",
+    "RelativePath": "api/FooterAddresses/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -907,22 +907,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.LocationsController",
-    "Method": "RemoveLocation",
-    "RelativePath": "api/Locations",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.LocationsController",
     "Method": "UpdateLocation",
     "RelativePath": "api/Locations",
     "HttpMethod": "PUT",
@@ -942,6 +926,22 @@
     "Method": "GetLocation",
     "RelativePath": "api/Locations/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.LocationsController",
+    "Method": "RemoveLocation",
+    "RelativePath": "api/Locations/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -981,22 +981,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.PricingsController",
-    "Method": "RemovePricing",
-    "RelativePath": "api/Pricings",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.PricingsController",
     "Method": "UpdatePricing",
     "RelativePath": "api/Pricings",
     "HttpMethod": "PUT",
@@ -1016,6 +1000,22 @@
     "Method": "GetPricing",
     "RelativePath": "api/Pricings/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.PricingsController",
+    "Method": "RemovePricing",
+    "RelativePath": "api/Pricings/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -1055,22 +1055,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.ServicesController",
-    "Method": "RemoveService",
-    "RelativePath": "api/Services",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.ServicesController",
     "Method": "UpdateService",
     "RelativePath": "api/Services",
     "HttpMethod": "PUT",
@@ -1090,6 +1074,22 @@
     "Method": "GetService",
     "RelativePath": "api/Services/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.ServicesController",
+    "Method": "RemoveService",
+    "RelativePath": "api/Services/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -1129,22 +1129,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.SocialMediasController",
-    "Method": "RemoveSocialMedia",
-    "RelativePath": "api/SocialMedias",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.SocialMediasController",
     "Method": "UpdateSocialMedia",
     "RelativePath": "api/SocialMedias",
     "HttpMethod": "PUT",
@@ -1164,6 +1148,22 @@
     "Method": "GetSocialMedia",
     "RelativePath": "api/SocialMedias/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.SocialMediasController",
+    "Method": "RemoveSocialMedia",
+    "RelativePath": "api/SocialMedias/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -1293,22 +1293,6 @@
   },
   {
     "ContainingType": "CarBook.WebApi.Controllers.TestimonialsController",
-    "Method": "RemoveTestimonial",
-    "RelativePath": "api/Testimonials",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CarBook.WebApi.Controllers.TestimonialsController",
     "Method": "UpdateTestimonial",
     "RelativePath": "api/Testimonials",
     "HttpMethod": "PUT",
@@ -1328,6 +1312,22 @@
     "Method": "GetTestimonial",
     "RelativePath": "api/Testimonials/{id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarBook.WebApi.Controllers.TestimonialsController",
+    "Method": "RemoveTestimonial",
+    "RelativePath": "api/Testimonials/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
