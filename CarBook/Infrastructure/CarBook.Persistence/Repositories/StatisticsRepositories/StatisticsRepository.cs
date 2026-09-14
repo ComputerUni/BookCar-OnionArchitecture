@@ -12,14 +12,16 @@ namespace CarBook.Persistence.Repositories.StatisticsRepositories
 {
     public class StatisticsRepository(CarBookContext _context) : IStatisticsRepository
     {
-        public string BlogTitleByMaxBlogComment()
+        public string GetBlogTitleByMaxBlogComment()
         {
-            throw new NotImplementedException();
+            var value = _context.Comments.GroupBy(x => x.Blog.Title).OrderByDescending(g => g.Count()).Select(g => g.Key).FirstOrDefault();
+            return value;
         }
 
-        public string BrandNameByMaxCar()
+        public string GetBrandNameByMaxCar()
         {
-            throw new NotImplementedException();
+            var value = _context.Cars.GroupBy(x => x.Brand.Name).OrderByDescending(g => g.Count()).Select(g => g.Key).FirstOrDefault();
+            return value;
 
         }
 
@@ -91,7 +93,7 @@ namespace CarBook.Persistence.Repositories.StatisticsRepositories
 
         public int GetCarCountByKmSmallerThen1000()
         {
-            var value = _context.Cars.Where(x => x.Km <= 1000).Count();
+            var value = _context.Cars.Where(x => x.Km <= 30000).Count();
             return value;
         }
 
