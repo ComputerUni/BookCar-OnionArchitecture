@@ -4,9 +4,9 @@ namespace CarBook.WebUI.ViewComponents.RentACarFilterComponents
 {
     public class _RentACarFilterComponentPartial : ViewComponent
     {
-        public IViewComponentResult Invoke(string v)
+        public IViewComponentResult Invoke(string p)
         {
-            TempData["value"] = v;
+            TempData["value"] = p;
             return View();
         }
     }
