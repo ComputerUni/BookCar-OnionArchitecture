@@ -1559,6 +1559,37 @@
         }
       }
     },
+    "/api/RentACars": {
+      "post": {
+        "tags": [
+          "RentACars"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetRentACarQuery"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetRentACarQuery"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetRentACarQuery"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Services": {
       "get": {
         "tags": [
@@ -2668,6 +2699,19 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "GetRentACarQuery": {
+        "type": "object",
+        "properties": {
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isAvailable": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
       },
       "TagCloud": {
         "type": "object",
