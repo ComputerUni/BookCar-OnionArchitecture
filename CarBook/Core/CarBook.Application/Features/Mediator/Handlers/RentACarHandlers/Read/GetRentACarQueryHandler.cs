@@ -18,6 +18,15 @@ namespace CarBook.Application.Features.Mediator.Handlers.RentACarHandlers.Read
             return values.Select(x => new GetRentACarQueryResult
             {
                 CarId = x.CarId,
+                BrandName = x.Car.Brand.Name,
+                Model = x.Car.Model,
+                CoverImageUrl = x.Car.CoverImageUrl,
+                Km = x.Car.Km,
+                Transmission = x.Car.Transmission,
+                Seat = x.Car.Seat,
+                Luggage = x.Car.Luggage,
+                Fuel = x.Car.Fuel,
+
             }).ToList();
         }
     }

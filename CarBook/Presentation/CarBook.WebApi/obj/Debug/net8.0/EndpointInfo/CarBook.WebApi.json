@@ -1560,29 +1560,27 @@
       }
     },
     "/api/RentACars": {
-      "post": {
+      "get": {
         "tags": [
           "RentACars"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetRentACarQuery"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetRentACarQuery"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/GetRentACarQuery"
-              }
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "isAvailable",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -2699,19 +2697,6 @@
         ],
         "type": "integer",
         "format": "int32"
-      },
-      "GetRentACarQuery": {
-        "type": "object",
-        "properties": {
-          "locationId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "isAvailable": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
       },
       "TagCloud": {
         "type": "object",

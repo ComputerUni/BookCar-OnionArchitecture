@@ -1,23 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarBook.Dto.BrandDtos;
+using CarBook.Dto.RentACarDtos;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
+using System.Text;
+using X.PagedList.Extensions;
 
 namespace CarBook.WebUI.Controllers
 {
-    public class RentACarListController : Controller
+    public class RentACarListController(IHttpClientFactory _httpClientFactory) : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int id)
         {
-            var bookpickdate = TempData["bookpickdate"];
-            var bookoffdate = TempData["bookoffdate"];
-            var timepick = TempData["timepick"];
-            var timeoff = TempData["timeoff"];
             var locationId = TempData["locationId"];
-
-            ViewBag.bookpickdate = bookpickdate;
-            ViewBag.bookoffdate = bookoffdate;
-            ViewBag.timepick = timepick;
-            ViewBag.timeoff = timeoff;
+            id = int.Parse(locationId.ToString());
             ViewBag.locationId = locationId;
 
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync($"https://localhost:7200/api/RentACars?locationId={id}&isAvailable=true");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var value = JsonConvert.DeserializeObject<List<FilterRentACarDto>>(jsonData);
+                return View(value);
+            }
             return View();
         }
     }

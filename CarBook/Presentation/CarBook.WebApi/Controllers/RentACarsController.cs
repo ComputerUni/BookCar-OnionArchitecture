@@ -9,10 +9,15 @@ namespace CarBook.WebApi.Controllers
     [ApiController]
     public class RentACarsController(IMediator _mediator) : ControllerBase
     {
-        [HttpPost]
-        public async Task<IActionResult> GetRentACarListByLocation(GetRentACarQuery query)
+        [HttpGet]
+        public async Task<IActionResult> GetRentACarListByLocation(int locationId, bool isAvailable)
         {
-            var values = await _mediator.Send(query);
+            GetRentACarQuery getRentACarQuery = new GetRentACarQuery
+            {
+                LocationId = locationId,
+                IsAvailable = isAvailable
+            };
+            var values = await _mediator.Send(getRentACarQuery);
             return Ok(values);
         }
     }

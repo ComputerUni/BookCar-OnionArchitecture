@@ -1,11 +1,70 @@
-﻿@{
+﻿@model List<FilterRentACarDto>
+
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/UILayout/Index.cshtml";
 }
 
-Taşınan Veri
-@ViewBag.bookpickdate = bookpickdate;
-@ViewBag.bookoffdate = bookoffdate;
-@ViewBag.timepick = timepick;
-@ViewBag.timeoff = timeoff;
-@ViewBag.locationId = locationId;
+
+<section class="ftco-section bg-light">
+    <div class="container">
+
+        <div class="row d-flex">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mb-4 d-flex align-items-stretch">
+                    <div class="car-wrap rounded ftco-animate w-100 d-flex flex-column bg-white shadow-sm">
+                        <div class="img rounded-top d-flex align-items-end" style="background-image: url(@item.CoverImageUrl);">
+                        </div>
+                        <div class="text p-4 d-flex flex-column flex-xl-grow-1">
+                            <h2 class="mb-2"><a href="car-single.html"><strong>@item.Brand</strong> @item.Model</a></h2>
+
+                            <div class="d-flex mb-3">
+                                <span class="cat">@item.Transmission</span>
+                                <p class="price ml-auto font-weight-bold text-primary mb-0">@item.Km.ToString("N0") <span class="text-muted font-weight-normal">km</span></p>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-4 text-muted small">
+                                <span><i class="flaticon-car mr-1"></i> @item.Fuel</span>
+                                <span><i class="flaticon-transportation mr-1"></i> @item.Seat Koltuk</span>
+                                <span><i class="flaticon-rent mr-1"></i> @item.Luggage Bagaj</span>
+                            </div>
+
+                            <div class="mt-auto">
+                                <div class="d-flex align-items-baseline justify-content-between mb-3">
+                                    <span class="text-muted small">Kiralama Bedeli:</span>
+                                    <div>
+                                        <span class="h4 font-weight-bold text-primary mb-0">@item.Amount.ToString("N0") ₺</span>
+                                        <span class="text-muted small">/ Günlük</span>
+                                    </div>
+                                </div>
+
+                                <p class="d-flex mb-0">
+                                    <a href="#" class="btn btn-primary py-2 mr-1 flex-fill text-center">Aracı Kirala</a>
+                                    <a href="car-single.html" class="btn btn-outline-secondary py-2 ml-1 flex-fill text-center">Detaylar</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        
+        <div class="row mt-5">
+            <div class="col text-center">
+                <div class="block-27">
+                    <ul>
+                        <li><a href="#">&lt;</a></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&gt;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

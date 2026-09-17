@@ -5,19 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Application.Features.CQRS.Results.CarResults
+namespace CarBook.Dto.RentACarDtos
 {
-    public class GetCarWithBrandQueryResult
+    public class FilterRentACarDto
     {
         public int CarId { get; set; }
-        public string BrandName { get; set; }
+        public string Brand { get; set; }
         public string Model { get; set; }
+        public decimal Amount { get; set; }
         public string CoverImageUrl { get; set; }
         public int Km { get; set; }
         public TransmissionType Transmission { get; set; }
         public byte Seat { get; set; }
         public byte Luggage { get; set; }
         public FuelType Fuel { get; set; }
-        public string BigImageUrl { get; set; }
     }
 }
