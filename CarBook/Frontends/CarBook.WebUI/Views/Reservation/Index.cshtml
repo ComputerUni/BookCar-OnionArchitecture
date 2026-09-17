@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<div class="col-md-12 block-9 mb-md-5">
+    <form action="#" method="post" class="bg-light p-5 p-md-5 contact-form rounded shadow-sm">
+        <div class="card-header border-5">
+            <h3 style="text-decoration:underline; color:dimgray"><i class="fa fa-car-battery"></i>Rezervasyon Formu</h3>
+        </div>
+
+        <div class="card-body shadow-lg border-5">
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">Seçilen Araç</label>
+                    <input type="text" class="form-control bg-white" placeholder="Almak İstediğiniz Araba" readonly>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">Adınız</label>
+                    <input type="text" class="form-control" placeholder="Adınız" required>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">Soyadınız</label>
+                    <input type="text" class="form-control" placeholder="Soyadınız" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">E-Posta Adresi</label>
+                    <input type="email" class="form-control" placeholder="ornek@mail.com" required>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">Telefon Numarası</label>
+                    <input type="tel" class="form-control" placeholder="05XX XXX XX XX" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">Alış Lokasyonu</label>
+                    <input type="text" class="form-control" placeholder="Almak İstediğiniz Lokasyon" required>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">İade Lokasyonu</label>
+                    <input type="text" class="form-control" placeholder="Teslim Etmek İstediğiniz Lokasyon" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label text-muted small fw-bold">Yaşınız</label>
+                    <input type="number" min="18" max="99" class="form-control" placeholder="Örn: 25" required>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-12">
+                    <label class="form-label text-muted small fw-bold">Ehliyet Veriliş Yılı / Deneyim (Yıl)</label>
+                    <input type="number" min="0" max="70" class="form-control" placeholder="Örn: 5" required>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-12">
+                    <label class="form-label text-muted small fw-bold">Ek Notlar</label>
+                    <textarea rows="5" class="form-control" placeholder="Varsa eklemek istedikleriniz, uçuş saati veya özel talepleriniz..."></textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-12 mt-3 ">
+            <button type="submit" class="btn btn-outline-secondary py-3 px-5 w-100 w-md-auto fw-bold shadow-sm">
+                Rezervasyonu Tamamla
+            </button>
+        </div>
+
+    </form>
+</div>
