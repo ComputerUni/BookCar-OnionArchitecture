@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Mediator\Handlers\RentACarHandlers\Write\" />
+    <Folder Include="Features\Mediator\Handlers\ReservationHandlers\Read\" />
   </ItemGroup>
 
 </Project>

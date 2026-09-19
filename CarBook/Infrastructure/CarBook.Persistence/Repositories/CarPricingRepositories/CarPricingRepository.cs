@@ -14,7 +14,7 @@ namespace CarBook.Persistence.Repositories.CarPricingRepositories
     {
         public async Task<List<CarPricing>> GetCarPricingWithCars()
         {
-            var values = await _context.CarPricings.Include(x => x.Car).ThenInclude(y => y.Brand).Include(x => x.Pricing).Where(z => z.PricingId == 4).ToListAsync();
+            var values = await _context.CarPricings.Include(x => x.Car).ThenInclude(y => y.Brand).Include(x => x.Pricing).Where(z => z.PricingId == 1).ToListAsync();
             return values;
         }
     }
