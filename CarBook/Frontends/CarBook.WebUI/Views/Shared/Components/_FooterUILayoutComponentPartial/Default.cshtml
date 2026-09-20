@@ -1,72 +1,212 @@
 ﻿@model List<ResultFooterAddressDto>
 
-<footer class="ftco-footer ftco-bg-dark ftco-section">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>book</span></a></h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4 ml-md-5">
-                    <h2 class="ftco-heading-2">Bilgilendirme</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Hakkımızda</a></li>
-                        <li><a href="#" class="py-2 d-block">Hizmetlerimiz</a></li>
-                        <li><a href="#" class="py-2 d-block">Şartlar & Koşullar</a></li>
-                        <li><a href="#" class="py-2 d-block">Güvenlik</a></li>
-                        <li><a href="#" class="py-2 d-block">Çerez Politikası</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Müşteri Desteği</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Sıkça Sorulan Sorular</a></li>
-                        <li><a href="#" class="py-2 d-block">Ödeme Yöntemleri</a></li>
-                        <li><a href="#" class="py-2 d-block">Kiralama</a></li>
-                        <li><a href="#" class="py-2 d-block">Nasıl Çalışır?</a></li>
-                        <li><a href="#" class="py-2 d-block">Bize Yazın</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Bir sorunuz mu var?</h2>
-                    <div class="block-23 mb-3">
-                        
-                        <ul>
-                            @foreach(var item in Model)
-                            {
-                                <li><span class="icon icon-map-marker"></span><span class="text">@item.address</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">@item.phone</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">@item.email</span></a></li>
-                            }
-                         
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#btn1').click(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "Şartlar ve Kiralama Koşulları",
+                html: `
+                    <div style="text-align: left; font-size: 14px; line-height: 1.6; color: #495057;">
+                        <p><strong>CarBook</strong> üzerinden gerçekleştirilen tüm rezervasyon ve kiralama işlemleri aşağıdaki temel kurallara tabidir:</p>
+                        <ul style="padding-left: 20px;">
+                                <li style="margin-top: 5px;"><strong>Sürücü Yaşı ve Ehliyet:</strong> Ekonomik segment araçlar için en az 21 yaş ve 2 yıllık geçerli ehliyet; lüks/SUV segmenti araçlar için ise en az 25 yaş ve 3 yıllık ehliyet zorunludur.</li>
+                                <li style="margin-top: 5px;"><strong>Teminat ve Depozito:</strong> Araç teslimatı esnasında ana sürücü adına düzenlenmiş kredi kartından segment bazlı provizyon (blokaj) bedeli tahsil edilmektedir.</li>
+                                <li style="margin-top: 5px;"><strong>Kilometre ve Yakıt Politikası:</strong> Kiralanan araçlar aynı yakıt seviyesiyle iade edilmelidir; kullanım süresine bağlı günlük kilometre limitinin aşımı halinde ek ücret uygulanır.</li>
+                                <li style="margin-top: 5px;"><strong>İptal ve Değişiklik:</strong> Rezervasyon başlangıç saatine en geç 24 saat kala yapılan iptal ve değişiklik taleplerinde kesintisiz ücret iadesi sağlanmaktadır.</li>
+                        </ul>
+                    </div>
+                `,
+                icon: "info",
+                confirmButtonText: "Okudum, Anladım",
+                confirmButtonColor: "#1089ff",
+                customClass: {
+                    popup: 'rounded-4 shadow-lg'
+                }
+            });
+        });
+
+        $('#btn2').click(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "Bilgi ve Ödeme Güvenliği",
+                html: `
+                        <div style="text-align: left; font-size: 14px; line-height: 1.6; color: #495057;">
+                            <p>CarBook platformu üzerinden gerçekleştirdiğiniz işlemler en yüksek güvenlik standartları ile korunmaktadır:</p>
+                            <ul style="padding-left: 20px;">
+                                    <li style="margin-top: 5px;"><strong>Veri Şifreleme:</strong> Tüm kullanıcı bilgileri ve web trafiği uçtan uca 256-bit SSL güvenlik sertifikası ile şifrelenerek korunur.</li>
+                                    <li style="margin-top: 5px;"><strong>Ödeme Güvenliği:</strong> Ödeme süreçlerinde 3D Secure protokolü kullanılmakta olup kredi kartı bilgileriniz hiçbir şart altında sistemlerimizde saklanmamaktadır.</li>
+                                    <li style="margin-top: 5px;"><strong>Kişisel Verilerin Korunması:</strong> Paylaştığınız kimlik ve iletişim bilgileri KVKK mevzuatına tam uyumlu biçimde yalnızca kiralama operasyonları için işlenir.</li>
+                                    <li style="margin-top: 5px;"><strong>Filo Güvenliği:</strong> Filomuzdaki tüm araçlar düzenli yetkili servis bakımlarından geçmekte ve kasko/sigorta poliçeleriyle güvence altına alınmaktadır.</li>
+                            </ul>
+                        </div>
+                    `,
+                icon: "success",
+                confirmButtonText: "Kapat",
+                confirmButtonColor: "#1089ff"
+            });
+        });
+
+        $('#btn3').click(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "Çerez (Cookie) Politikası",
+                html: `
+                        <div style="text-align: left; font-size: 14px; line-height: 1.6; color: #495057;">
+                            <p>Size daha iyi, hızlı ve kişiselleştirilmiş bir kiralama deneyimi sunabilmek adına sitemizde çerezler kullanılmaktadır:</p>
+                            <ul style="padding-left: 20px;">
+                                    <li style="margin-top: 5px;"><strong>Zorunlu Çerezler:</strong> Rezervasyon adımlarının tamamlanması, oturum güvenliği ve form akışının sağlıklı işlemesi için zorunludur.</li>
+                                    <li style="margin-top: 5px;"><strong>Performans ve Analitik:</strong> Ziyaretçilerimizin platformu nasıl kullandığını analiz etmek, sayfa yükleme hızlarını optimize etmek ve sistem hatalarını tespit etmek amacıyla kullanılır.</li>
+                                    <li style="margin-top: 5px;"><strong>İşlevsellik Çerezleri:</strong> Dil, konum tercihleriniz ve geçmiş araç arama filtrelerinizin hatırlanmasını sağlayarak kullanım kolaylığı sunar.</li>
+                                    <li style="margin-top: 5px;"><strong>Tercih Yönetimi:</strong> Dilediğiniz zaman tarayıcı ayarlarınız üzerinden çerez kullanımını kısıtlayabilir veya tamamen devre dışı bırakabilirsiniz.</li>
+                            </ul>
+                        </div>
+                    `,
+                icon: "warning",
+                confirmButtonText: "Anladım",
+                confirmButtonColor: "#1089ff"
+            });
+        });
+
+        $('#btn4').click(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "Sıkça Sorulan Sorular",
+                html: `
+                    <div style="text-align: left; font-size: 14px; line-height: 1.6; color: #495057;">
+                        <div class="mb-3">
+                            <strong style="color: #1089ff;">S: Kiralama için hangi belgeler gereklidir?</strong>
+                            <p class="mb-2">C: T.C. kimlik kartı (veya pasaport), geçerli sürücü belgesi ve ana sürücü adına tanımlı kredi kartı ibraz edilmelidir.</p>
+                        </div>
+                        <div class="mb-3">
+                            <strong style="color: #1089ff;">S: Aracı teslim aldığım ofisten farklı bir noktaya bırakabilir miyim?</strong>
+                            <p class="mb-2">C: Evet, rezervasyon aşamasında 'İade Lokasyonu' belirterek farklı bir istasyona teslim edebilirsiniz (tek yön ücreti uygulanabilir).</p>
+                        </div>
+                        <div>
+                            <strong style="color: #1089ff;">S: Aracı başkası kullanabilir mi?</strong>
+                            <p class="mb-0">C: Sözleşmeye 'Ek Sürücü' olarak eklenmeyen kişilerin aracı kullanması durumunda kasko ve sigorta teminatları geçersiz sayılır.</p>
+                        </div>
+                    </div>
+                `,
+                icon: "question",
+                confirmButtonText: "Kapat",
+                confirmButtonColor: "#1089ff"
+            });
+        });
+
+        $('#btn5').click(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "Ödeme ve Teminat Yöntemleri",
+                html: `
+                    <div style="text-align: left; font-size: 14px; line-height: 1.6; color: #495057;">
+                        <p>Güvenli ve esnek kiralama süreçlerimiz kapsamında sunulan ödeme koşulları:</p>
+                        <ul style="padding-left: 20px;">
+                                <li style="margin-top: 5px;"><strong>Kredi Kartı ile Ödeme:</strong> Tüm Visa, MasterCard ve Troy logolu kredi kartları geçerlidir. Taksit imkanları kart sağlayıcınıza göre değişebilir.</li>
+                                <li style="margin-top: 5px;"><strong>Depozito / Provizyon:</strong> Araç segmentine göre belirlenen geçici teminat tutarı teslimat anında kredi kartınızdan bloke edilir; araç eksiksiz teslim alındıktan sonra blokaj kaldırılır.</li>
+                                <li style="margin-top: 5px;"><strong>Nakit ve Banka Kartı (Debit):</strong> Güvenlik politikaları gereğince depozito blokesi için nakit para veya ön ödemeli banka kartları kabul edilmemektedir.</li>
+                                <li style="margin-top: 5px;"><strong>Kurumsal Ödeme:</strong> Şirket kiralama talepleriniz için cari hesap ve kurumsal faturalandırma desteği mevcuttur.</li>
+                        </ul>
+                    </div>
+                `,
+                icon: "info",
+                confirmButtonText: "Anladım",
+                confirmButtonColor: "#1089ff"
+            });
+        });
+
+        $('#btn6').click(function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "CarBook Nasıl Çalışır?",
+                html: `
+                    <div style="text-align: left; font-size: 14px; line-height: 1.7; color: #495057;">
+                        <p class="mb-3">Yalnızca 4 basit adımda dilediğiniz aracı rezerve edin ve yola çıkın:</p>
+                        <ol style="padding-left: 20px;">
+                                <li style="margin-top: 5px;"><strong>Aracını Seç:</strong> İhtiyacına en uygun araç sınıfını, vites ve yakıt tipini filtreleyerek listemizden belirle.</li>
+                                <li style="margin-top: 5px;"><strong>Bilgilerini Gir:</strong> Alış ve iade noktalarını, kiralama tarihlerini ve sürücü detaylarını rezervasyon formuna doldur.</li>
+                                <li style="margin-top: 5px;"><strong>Onayı Al:</strong> Talebin incelenip dakikalar içinde e-posta veya SMS aracılığıyla rezervasyon onay kodun iletilsin.</li>
+                                <li style="margin-top: 5px;"><strong>Anahtarı Teslim Al:</strong> Seçtiğin teslimat noktasında belgelerini ibraz et, sözleşmeni imzala ve yolculuğun keyfini çıkar!</li>
+                        </ol>
+                    </div>
+                `,
+                icon: "success",
+                confirmButtonText: "Harika, Başlayalım!",
+                confirmButtonColor: "#1089ff"
+            });
+        });
+    });
+</script>
+
+@foreach (var item in Model)
+{
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2"><a href="#" class="logo">Car<span>book</span></a></h2>
+                        <p>@item.description</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
                         </ul>
                     </div>
                 </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Bilgilendirme</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="/About/Index" class="py-2 d-block">Hakkımızda</a></li>
+                            <li><a href="/Car/Index" class="py-2 d-block">Hizmetlerimiz</a></li>
+                            <li><a href="#" id="btn1" class="py-2 d-block">Şartlar & Koşullar</a></li>
+                            <li><a href="#" id="btn2" class="py-2 d-block">Güvenlik</a></li>
+                            <li><a href="#" id="btn3" class="py-2 d-block">Çerez Politikası</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Müşteri Desteği</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" id="btn4" class="py-2 d-block">Sıkça Sorulan Sorular</a></li>
+                            <li><a href="#" id="btn5" class="py-2 d-block">Ödeme Yöntemleri</a></li>
+                            <li><a href="/CarPricing/Index" class="py-2 d-block">Kiralama</a></li>
+                            <li><a href="#" id="btn6" class="py-2 d-block">Nasıl Çalışır?</a></li>
+                            <li><a href="/Contact/Index" class="py-2 d-block">Bize Yazın</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Bir sorunuz mu var?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">@item.address</span></li>
+                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">@item.phone</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">@item.email</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="row">
+                <div class="col-md-12 text-center">
 
-                <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tüm hakları saklıdır | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tüm hakları saklıdır | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+}
+
 
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
