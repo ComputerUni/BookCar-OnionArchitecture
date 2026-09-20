@@ -25,6 +25,8 @@ namespace CarBook.Persistence.Repositories.CarPricingRepositories
             {
                 Model = z.Model,
                 BrandName = z.Brand.Name,
+                Transmission = z.Transmission,
+                Fuel = z.Fuel,
                 CoverImageUrl = z.CoverImageUrl,
                 DailyAmount = z.CarPricings.Where(p => p.PricingId == 1).Select(p => p.Amount).FirstOrDefault(),
                 WeeklyAmount = z.CarPricings.Where(p => p.PricingId == 2).Select(p => p.Amount).FirstOrDefault(),

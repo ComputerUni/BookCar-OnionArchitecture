@@ -418,7 +418,7 @@
   {
     "ContainingType": "CarBook.WebApi.Controllers.CarPricingsController",
     "Method": "GetCarPricingWithTimePeriod",
-    "RelativePath": "api/CarPricings",
+    "RelativePath": "api/CarPricings/GetCarPricingWithTimePeriod",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
