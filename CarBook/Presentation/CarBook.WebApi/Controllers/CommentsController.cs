@@ -1,5 +1,7 @@
-﻿using CarBook.Application.Features.RepositoryPattern;
+﻿using CarBook.Application.Features.Mediator.Commands.CommentCommands;
+using CarBook.Application.Features.RepositoryPattern;
 using CarBook.Domain.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,7 +9,7 @@ namespace CarBook.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CommentsController(IGenericRepository<Comment> _repository) : ControllerBase
+    public class CommentsController(IGenericRepository<Comment> _repository, IMediator _mediator) : ControllerBase
     {
         [HttpGet]
         public IActionResult CommentList()
@@ -38,14 +40,28 @@ namespace CarBook.WebApi.Controllers
             return Ok(value);
         }
 
-
-
         [HttpGet("CommentListByBlog")]
         public IActionResult CommentListByBlog(int id)
         {
             var value = _repository.GetCommentsByBlogId(id);
             return Ok(value);
         }
+
+        [HttpGet("GetCountCommentByBlog")]
+        public IActionResult GetCountCommentByBlog(int id)
+        {
+            var value = _repository.GetCountCommentByBlog(id);
+            return Ok(value);
+        }
+
+
+        [HttpPost("CreateCommentWithMediator")]
+        public async Task<IActionResult> CreateComment(CreateCommentCommand command)
+        {
+            await _mediator.Send(command);
+            return Ok("Yorum Başarıyla Oluşturuldu.");
+        }
+
 
     }
 }

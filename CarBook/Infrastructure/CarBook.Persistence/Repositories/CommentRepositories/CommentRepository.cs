@@ -51,5 +51,10 @@ namespace CarBook.Persistence.Repositories.CommentRepositories
         {
             return _context.Set<Comment>().Where(x => x.BlogId == id).ToList();
         }
+
+        public int GetCountCommentByBlog(int id)
+        {
+            return _context.Comments.Where(x => x.BlogId == id).Count();
+        }
     }
 }

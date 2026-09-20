@@ -1,6 +1,8 @@
 ﻿using CarBook.Dto.BlogDtos;
+using CarBook.Dto.CommentDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace CarBook.WebUI.Controllers
 {
@@ -26,7 +28,38 @@ namespace CarBook.WebUI.Controllers
             ViewBag.v1 = "Bloglar";
             ViewBag.v2 = "Blog Detayı ve Yorumlar";
             ViewBag.blogid = id;
+
+            var client = _httpClientFactory.CreateClient();
+            var response2 = await client.GetAsync($"https://localhost:7200/api/Comments/GetCountCommentByBlog?id=" + id);
+            if (response2.IsSuccessStatusCode)
+            {
+                var jsonData2 = await response2.Content.ReadAsStringAsync();
+                ViewBag.commentCount = jsonData2;
+            }
+
             return View();
         }
+
+        [HttpGet]
+        public PartialViewResult AddComment(int id)
+        {
+            ViewBag.blogid = id;
+            return PartialView();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddComment(CreateCommentDto dto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(dto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync("https://localhost:7200/api/Comments/CreateCommentWithMediator", stringContent);
+            if(response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("BlogDetail", "Blog", new { id = dto.BlogId });
+            }
+            return View();
+        }
+
     }
 }
