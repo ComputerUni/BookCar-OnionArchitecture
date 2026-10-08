@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarBook.Dto.CarFeatureDtos;
+using CarBook.Dto.CategoryDtos;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace CarBook.WebUI.Areas.Admin.Controllers
 {
@@ -8,15 +12,40 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
     {
 
         [Route("Index/{id}")]
-        public IActionResult Index(int id)
+        [HttpGet]
+        public async Task<IActionResult> Index(int id)
         {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync($"https://localhost:7200/api/CarFeatures/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var value = JsonConvert.DeserializeObject<List<ResultCarFeatureByCarIdDto>>(jsonData);
+                return View(value);
+            }
             return View();
         }
 
-        //[HttpGet]
-        //public IActionResult AdminCarDetail(int id)
-        //{
-        //    return View();
-        //}
+        [Route("Index")]
+        [HttpPost]
+        public async Task<IActionResult> Index(List<ResultCarFeatureByCarIdDto> resultCarFeatureByCarIdDto)
+        {
+            foreach(var item in resultCarFeatureByCarIdDto)
+            {
+                if(item.Available)
+                {
+                    var client = _httpClientFactory.CreateClient();
+                    var jsonData = JsonConvert.SerializeObject(resultCarFeatureByCarIdDto);
+                    StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    await client.PostAsync("https://localhost:7200/api/Categories", stringContent);
+                    return RedirectToAction("Index", "AdminCar");
+                }
+                else
+                {
+
+                }
+            }
+            
+        }
     }
 }
