@@ -26,26 +26,24 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
             return View();
         }
 
-        [Route("Index")]
+        [Route("Index/{id}")]
         [HttpPost]
         public async Task<IActionResult> Index(List<ResultCarFeatureByCarIdDto> resultCarFeatureByCarIdDto)
         {
-            foreach(var item in resultCarFeatureByCarIdDto)
+            foreach (var item in resultCarFeatureByCarIdDto)
             {
-                if(item.Available)
+                if (item.Available)
                 {
                     var client = _httpClientFactory.CreateClient();
-                    var jsonData = JsonConvert.SerializeObject(resultCarFeatureByCarIdDto);
-                    StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                    await client.PostAsync("https://localhost:7200/api/Categories", stringContent);
-                    return RedirectToAction("Index", "AdminCar");
+                    await client.GetAsync($"https://localhost:7200/api/CarFeatures/CarFeatureChangeAvailableToTrue?id=/{item.CarFeatureId}");
                 }
                 else
                 {
-
+                    var client = _httpClientFactory.CreateClient();
+                    await client.GetAsync($"https://localhost:7200/api/CarFeatures/CarFeatureChangeAvailableToFalse?id=/{item.CarFeatureId}");
                 }
             }
-            
+            return RedirectToAction("Index", "AdminCar");
         }
     }
 }

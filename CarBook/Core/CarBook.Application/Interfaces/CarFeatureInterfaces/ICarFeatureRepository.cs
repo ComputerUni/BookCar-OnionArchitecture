@@ -10,5 +10,7 @@ namespace CarBook.Application.Interfaces.CarFeatureInterfaces
     public interface ICarFeatureRepository
     {
         Task<List<CarFeature>> GetCarFeatureByCarIdAsync(int carId);
+        void ChangeCarFeatureAvailableToFalse(int id);
+        void ChangeCarFeatureAvailableToTrue(int id);
     }
 }

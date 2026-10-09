@@ -12,6 +12,20 @@ namespace CarBook.Persistence.Repositories.CarFeatureRepositories
 {
     public class CarFeatureRepository(CarBookContext _context) : ICarFeatureRepository
     {
+        public void ChangeCarFeatureAvailableToFalse(int id)
+        {
+            var values = _context.CarFeatures.Where(x => x.CarFeatureId == id).FirstOrDefault();
+            values.Available = false;
+            _context.SaveChanges();
+        }
+
+        public void ChangeCarFeatureAvailableToTrue(int id)
+        {
+            var values = _context.CarFeatures.Where(x => x.CarFeatureId == id).FirstOrDefault();
+            values.Available = true;
+            _context.SaveChanges();
+        }
+
         public Task<List<CarFeature>> GetCarFeatureByCarIdAsync(int carId)
         {
             var values = _context.CarFeatures.Include(x => x.Feature).Where(x => x.CarId == carId).ToListAsync();
