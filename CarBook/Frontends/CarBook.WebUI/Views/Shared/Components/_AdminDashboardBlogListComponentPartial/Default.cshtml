@@ -1,0 +1,41 @@
+﻿@model List<ResultAllBlogsWithAuthors>
+<div class="col-xl-6">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="card-title">Son Eklenen Bloglar</h4>
+            <p class="card-subtitle mb-4 font-size-13">
+                Sistemde yayımlanan son blog içerikleri ve detayları
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-centered table-hover table-xl mb-0" id="recent-orders">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0">Başlık</th>
+                            <th class="border-top-0">Yazar</th>
+                            <th class="border-top-0">Kategori</th>
+                            <th class="border-top-0">Detay</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-truncate">@item.Title</td>
+                                <td class="text-truncate">@item.AuthorName</td>
+                                <td class="text-truncate">@item.CategoryName</td>
+                                <td class="text-right">
+                                    <a href="/Blog/BlogDetail/@item.BlogId" target="_blank" class="btn btn-outline-primary btn-sm">
+                                        <i class="ri-external-link-line me-1"></i> Blogu Aç
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div> <!-- end card-body-->
+    </div> <!-- end card-->
+</div> <!-- end col -->

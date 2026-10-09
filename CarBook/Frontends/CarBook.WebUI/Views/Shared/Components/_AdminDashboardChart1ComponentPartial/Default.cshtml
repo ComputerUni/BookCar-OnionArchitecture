@@ -1,0 +1,94 @@
+﻿@using Newtonsoft.Json
+<script src="~/chart.js"></script>
+
+<div class="col-lg-4">
+    <div class="card shadow-sm border-0">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="card-title mb-0">Filo Kilometre Dağılımı</h4>
+                <span class="badge bg-light text-primary border">Aktif Araçlar</span>
+            </div>
+
+
+            <div style="position: relative; height: 320px; width: 100%;">
+                <canvas id="my1Chart"></canvas>
+            </div>
+
+            <script>
+                            (function() {
+                                var ctx = document.getElementById('my1Chart').getContext('2d');
+
+                            
+                                var gradient = ctx.createLinearGradient(0, 0, 0, 240);
+                                gradient.addColorStop(0, 'rgba(54, 162, 235, 0.35)');
+                                gradient.addColorStop(1, 'rgba(54, 162, 235, 0.0)');
+
+                                new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: @Html.Raw(JsonConvert.SerializeObject(ViewBag.KmLabels)),
+                                        datasets: [{
+                                            label: 'Kiralama Adedi',
+                                            data: @Html.Raw(JsonConvert.SerializeObject(ViewBag.KmCounts)),
+                                            borderColor: '#3b82f6',
+                                            backgroundColor: gradient,
+                                            fill: true,
+                                            tension: 0.38, 
+                                            borderWidth: 2.5,
+                                            pointBackgroundColor: '#ffffff',
+                                            pointBorderColor: '#3b82f6',
+                                            pointBorderWidth: 2,
+                                            pointRadius: 4,
+                                            pointHoverRadius: 6
+                                        }]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        maintainAspectRatio: false,
+                                        plugins: {
+                                            legend: {
+                                                display: false 
+                                            },
+                                            tooltip: {
+                                                padding: 10,
+                                                callbacks: {
+                                                    label: function(context) {
+                                                        return ' ' + context.parsed.y + ' Araç';
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        scales: {
+                                            x: {
+                                                grid: {
+                                                    display: false 
+                                                }
+                                            },
+                                            y: {
+                                                beginAtZero: true,
+                                                grid: {
+                                                    color: 'rgba(0, 0, 0, 0.05)' 
+                                                },
+                                                ticks: {
+                                                    stepSize: 100
+                                                }
+                                            }
+                                        }
+                                    }
+                                });
+                            })();
+            </script>
+
+            <div class="row text-center mt-3 pt-2 border-top">
+                <div class="col-6">
+                    <h4 class="mb-1 text-primary font-weight-bold">@ViewBag.AvgKm km</h4>
+                    <p class="text-muted small mb-0">Ortalama KM</p>
+                </div>
+                <div class="col-6">
+                    <h4 class="mb-1 text-success font-weight-bold">@ViewBag.MinKm km</h4>
+                    <p class="text-muted small mb-0">En Düşük KM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
