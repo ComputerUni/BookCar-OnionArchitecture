@@ -1,0 +1,29 @@
+﻿using CarBook.Application.Enums;
+using CarBook.Application.Features.Mediator.Commands.AppUserCommands;
+using CarBook.Application.Interfaces;
+using CarBook.Domain.Entities;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CarBook.Application.Features.Mediator.Handlers.AppUserHandlers
+{
+    public class CreateAppUserCommandHandler(IRepository<AppUser> _repository) : IRequestHandler<CreateAppUserCommand>
+    {
+        public async Task Handle(CreateAppUserCommand request, CancellationToken cancellationToken)
+        {
+            await _repository.CreateAsync(new AppUser
+            {
+                Username = request.Username,
+                Name = request.Name,
+                Surname = request.Surname,
+                Email = request.Email,
+                Password = request.Password,
+                AppRoleId = (int)RoleType.Member
+            });
+        }
+    }
+}
