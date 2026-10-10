@@ -1187,6 +1187,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CarBook.WebApi.Controllers.ReviewsController",
+    "Method": "GetReviewByCarId",
+    "RelativePath": "api/Reviews",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CarBook.WebApi.Controllers.ServicesController",
     "Method": "ServiceList",
     "RelativePath": "api/Services",
