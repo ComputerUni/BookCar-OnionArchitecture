@@ -32,10 +32,9 @@ namespace CarBook.Application.Tools
             var signInCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expireDate = DateTime.UtcNow.AddDays(JwtTokenDefaults.Expire);
 
-            JwtSecurityToken token = new JwtSecurityToken(issuer: JwtTokenDefaults.ValidAudience, claims: claims, notBefore: DateTime.UtcNow, expires: expireDate, signingCredentials: signInCredentials);
+            JwtSecurityToken token = new JwtSecurityToken(issuer: JwtTokenDefaults.ValidIssuer, audience: JwtTokenDefaults.ValidAudience, claims: claims, notBefore: DateTime.UtcNow, expires: expireDate, signingCredentials: signInCredentials);
             JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
-            return new TokenResponseDto(tokenHandler.WriteToken(token), expireDate);
-            
+            return new TokenResponseDto(tokenHandler.WriteToken(token), expireDate);            
         }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using CarBook.Dto.BannerDtos;
 using CarBook.Dto.LocationDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 using System.Text;
 using X.PagedList.Extensions;
 
@@ -14,13 +16,18 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         [Route("Index")]
         public async Task<IActionResult> Index(int page = 1)
         {
-            var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:7200/api/Locations");
-            if (response.IsSuccessStatusCode)
+            var token = User.Claims.FirstOrDefault(x => x.Type == "accessToken")?.Value;
+            if (token != null)
             {
-                var jsonData = await response.Content.ReadAsStringAsync();
-                var value = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
-                return View(value.ToPagedList(page, 13));
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                var response = await client.GetAsync("https://localhost:7200/api/Locations");
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonData = await response.Content.ReadAsStringAsync();
+                    var value = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
+                    return View(value.ToPagedList(page, 13));
+                }
             }
             return View();
         }

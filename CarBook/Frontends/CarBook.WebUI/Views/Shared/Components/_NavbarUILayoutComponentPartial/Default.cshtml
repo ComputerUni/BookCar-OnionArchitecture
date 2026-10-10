@@ -18,6 +18,31 @@
                 <li class="nav-item @(currentController == "Car" ? "active" : "")"><a href="/Car/Index" class="nav-link">Arabalar</a></li>
                 <li class="nav-item @(currentController == "Blog" ? "active" : "")"><a href="/Blog/Index" class="nav-link">Bloglar</a></li>
                 <li class="nav-item @(currentController == "Contact" ? "active" : "")"><a href="/Contact/Index" class="nav-link">İletişim</a></li>
+                @if (User.Identity != null && User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item dropdown ml-lg-2">
+                        <a class="nav-link dropdown-toggle text-primary font-weight-bold" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="oi oi-person mr-1"></span> @User.Identity.Name
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <a class="dropdown-item" href="/Admin/AdminDashboard/Index">Admin Paneli</a>
+                                <div class="dropdown-divider"></div>
+                            }
+                            <a class="dropdown-item text-danger" href="/Login/Logout">
+                                <span class="oi oi-account-logout mr-1"></span> Çıkış Yap
+                            </a>
+                        </div>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item ml-lg-2">
+                        <a href="/Login/Index" class="nav-link btn btn-primary text-white px-3 py-2" style="border-radius: 20px;">Giriş Yap</a>
+                    </li>
+                }
+
             </ul>
         </div>
     </div>

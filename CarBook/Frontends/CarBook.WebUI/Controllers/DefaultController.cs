@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
 
 namespace CarBook.WebUI.Controllers
 {
@@ -11,18 +12,25 @@ namespace CarBook.WebUI.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:7200/api/Locations");
+            var token = User.Claims.FirstOrDefault(x => x.Type == "accessToken")?.Value;
+            if (token != null)
+            {
+                var client = _httpClientFactory.CreateClient();
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            var jsonData = await response.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
-            List<SelectListItem> values2 = (from x in values
-                                            select new SelectListItem
-                                            {
-                                                Text = x.Name,
-                                                Value = x.LocationId.ToString()
-                                            }).ToList();
-            ViewBag.v = values2;
+                var response = await client.GetAsync("https://localhost:7200/api/Locations");
+
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
+                List<SelectListItem> values2 = (from x in values
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.Name,
+                                                    Value = x.LocationId.ToString()
+                                                }).ToList();
+                ViewBag.v = values2;
+            }
+            
             return View();
 
         }
