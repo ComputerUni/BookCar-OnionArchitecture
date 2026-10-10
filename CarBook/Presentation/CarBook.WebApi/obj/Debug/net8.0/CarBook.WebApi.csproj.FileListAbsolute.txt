@@ -159,3 +159,4 @@ C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\obj\Debug\ne
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\BURHAN\Desktop\CarBook\CarBook\Presentation\CarBook.WebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
