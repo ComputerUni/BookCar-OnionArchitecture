@@ -195,8 +195,8 @@ CarBook/
 ### 🏠 Anasayfa
 ![Anasayfa](./screenshots/Ekran%20görüntüsü%202026-10-10%20192446.png)
 
-### 🚗 Araç Listeleme
-![Araç Listeleme](./screenshots/Ekran%20görüntüsü%202026-10-10%20192508.png)
+### 🚗 Müşteriler
+![Müşteriler](./screenshots/Ekran%20görüntüsü%202026-10-10%20192508.png)
 
 ### 📋 Araç Detayları
 ![Araç Detayları](./screenshots/Ekran%20görüntüsü%202026-10-10%20192536.png)
@@ -204,29 +204,29 @@ CarBook/
 ### 🎯 Kiralama İşlemi
 ![Kiralama İşlemi](./screenshots/Ekran%20görüntüsü%202026-10-10%20192552.png)
 
-### 💳 Fiyatlandırma
-![Fiyatlandırma](./screenshots/Ekran%20görüntüsü%202026-10-10%20192759.png)
+### 💳 Blog Detay
+![Blog Detay](./screenshots/Ekran%20görüntüsü%202026-10-10%20192759.png)
 
-### 👨‍💼 Admin Paneli - Araçlar
-![Admin Arabalar](./screenshots/Ekran%20görüntüsü%202026-10-10%20192823.png)
+### 👨‍💼 Blog Yorumlar
+![Blog Yorumlar](./screenshots/Ekran%20görüntüsü%202026-10-10%20192823.png)
 
-### 🏷️ Admin Paneli - Markalar
-![Admin Markalar](./screenshots/Ekran%20görüntüsü%202026-10-10%20192956.png)
+### 🏷️ Rezervasyon
+![Rezervasyon](./screenshots/Ekran%20görüntüsü%202026-10-10%20192956.png)
 
-### ✍️ Admin Paneli - Blog
-![Admin Blog](./screenshots/Ekran%20görüntüsü%202026-10-10%20193011.png)
+### ✍️ Dashboard
+![Dashboard](./screenshots/Ekran%20görüntüsü%202026-10-10%20193011.png)
 
-### 📝 Blog Yazı Detayı
-![Blog Detayı](./screenshots/Ekran%20görüntüsü%202026-10-10%20193046.png)
+### 📝 Arabalar
+![Arabalar](./screenshots/Ekran%20görüntüsü%202026-10-10%20193046.png)
 
-### 💬 Yorumlar
-![Yorumlar](./screenshots/Ekran%20görüntüsü%202026-10-10%20193101.png)
+### 💬 Yazarlar
+![Yazarlar](./screenshots/Ekran%20görüntüsü%202026-10-10%20193101.png)
 
-### ⭐ Değerlendirmeler
-![Değerlendirmeler](./screenshots/Ekran%20görüntüsü%202026-10-10%20193113.png)
+### ⭐ Bloglar
+![Bloglar](./screenshots/Ekran%20görüntüsü%202026-10-10%20193113.png)
 
-### 📞 İletişim Formu
-![İletişim](./screenshots/Ekran%20görüntüsü%202026-10-10%20193148.png)
+### 📞 Referanslar
+![Referanslar](./screenshots/Ekran%20görüntüsü%202026-10-10%20193148.png)
 
 ---
 
